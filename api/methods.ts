@@ -3,13 +3,13 @@ import { getCheckTaskData, getId, getTasksData, setTasksData, taskIndex } from "
 
 
 export const createTask = ( req: express.Request, res: express.Response )=>{
-    console.log(req.body)
     const task = getCheckTaskData(req);
-    console.log(task)
     if(!task){
         res.sendStatus(400);
         return;
     }
+    res.sendStatus(400);
+    return;
     const tasks = getTasksData();
     // id от клиента игнорируем
     task.id = Date.now();
