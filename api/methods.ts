@@ -8,13 +8,11 @@ export const createTask = ( req: express.Request, res: express.Response )=>{
         res.sendStatus(400);
         return;
     }
-    res.sendStatus(400);
-    return;
     const tasks = getTasksData();
     // id от клиента игнорируем
     task.id = Date.now();
     tasks.push(task);
-    setTasksData(tasks);
+    //setTasksData(tasks);
     res.sendStatus(200);
 };
 
