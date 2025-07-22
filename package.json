@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --build",
-    "start": "nodemon index.ts"
+    "start": "nodemon src/index.ts --ignore tasksData.json"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
