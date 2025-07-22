@@ -12,7 +12,7 @@ export const createTask = ( req: express.Request, res: express.Response )=>{
     // id от клиента игнорируем
     task.id = Date.now();
     tasks.push(task);
-    //setTasksData(tasks);
+    setTasksData(tasks);
     res.sendStatus(200);
 };
 
